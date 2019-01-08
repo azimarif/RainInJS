@@ -135,6 +135,10 @@ const animateLightning = function () {
   drawLightning();
 };
 
+const playThunderSound = function () {
+  document.getElementById('thunder').play();
+};
+
 createDrops();
 initCanvasContext(rainContext, 1);
 initCanvasContext(lightningContext, 3);
@@ -148,3 +152,5 @@ setInterval(() => {
   });
   animateLightning();
 }, 30);
+
+setInterval(playThunderSound, 4000);
